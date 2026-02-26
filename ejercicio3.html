@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 3 — Cálculo de Sueldo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <h1>Ejercicio 3 — Cálculo de Sueldo</h1>
+
+  <p class="desc">
+    Sueldo base: <strong class="sueldo-destacado">40,000 € / año</strong>.
+    El porcentaje de aumento depende de los años de antigüedad en la empresa.
+  </p>
+
+  <div class="card">
+    <label for="anios">Años en la empresa:</label>
+    <input type="number" id="anios" placeholder="Ej: 7" min="0" />
+    <button class="btn btn-full" onclick="calcularSueldo()">Calcular Sueldo</button>
+  </div>
+
+  <div id="resultados" class="card oculto">
+    <h2>Resultado</h2>
+    <table class="tabla-resultado">
+      <tr><td>Años trabajados</td><td id="tdAnios"></td></tr>
+      <tr><td>Criterio aplicado</td><td id="tdCriterio"></td></tr>
+      <tr><td>Sueldo base</td><td id="tdBase"></td></tr>
+      <tr><td>Aumento</td><td id="tdAumento"></td></tr>
+      <tr><td><strong>Sueldo final anual</strong></td><td id="tdFinal"></td></tr>
+    </table>
+  </div>
+
+  <div class="btn-group">
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+  </div>
+
+  <script src="js/ejercicio3.js"></script>
+</body>
+</html>

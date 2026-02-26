@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 2 — Votación</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <h1>Ejercicio 2 — Sistema de Votación</h1>
+  <p class="desc">Ingresa tus datos y emite tu voto.</p>
+
+  <div class="card">
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Escribe tu nombre" />
+
+    <label>Sección:</label>
+    <div class="radio-group">
+      <label><input type="radio" name="seccion" value="norte"> Norte</label>
+      <label><input type="radio" name="seccion" value="sur"> Sur</label>
+      <label><input type="radio" name="seccion" value="centro"> Centro</label>
+    </div>
+
+    <label for="candidato">Candidato:</label>
+    <select id="candidato">
+      <option value="">-- Selecciona --</option>
+      <option value="Candidato A">Candidato A</option>
+      <option value="Candidato B">Candidato B</option>
+      <option value="Candidato C">Candidato C</option>
+    </select>
+
+    <button class="btn btn-full" onclick="emitirVoto()">Emitir voto</button>
+
+  </div>
+
+  <!-- Resultados -->
+ <div id="resultados" class="card oculto"></div>
+    <h2>Resultados</h2>
+    <p id="msgVoto"></p>
+    <div id="barras"></div>
+  </div>
+
+  <div class="btn-group">
+    <a class="btn btn-outline" href="index.html">Volver al menú</a>
+  </div>
+
+  <script src="ejercicio2.js"></script>
+
+</body>
+</html>

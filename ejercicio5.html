@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 5 — Arreglos de Países</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <h1> Ejercicio 5 — Arreglos de Países</h1>
+  <p class="desc">Arreglo inicial con 10 países. Cada botón aplica una función diferente de arreglos.</p>
+
+   
+  <div class="arr-display">
+    <span>Arreglo actual:</span>
+    <div id="arrDisplay"></div>
+  </div>
+
+  
+  <div class="grid">
+
+    
+    <div class="card">
+      <h2>1. Pop <span class="badge">.pop()</span></h2>
+      <p class="metodo">Elimina el último elemento del arreglo.</p>
+      <button class="btn" onclick="accionPop()">Ejecutar Pop</button>
+      <div class="output" id="outPop"></div>
+    </div>
+
+   
+    <div class="card">
+      <h2>2. Shift <span class="badge">.shift()</span></h2>
+      <p class="metodo">Elimina el primer elemento del arreglo.</p>
+      <button class="btn" onclick="accionShift()">Ejecutar Shift</button>
+      <div class="output" id="outShift"></div>
+    </div>
+
+    
+    <div class="card">
+      <h2>3. Push <span class="badge">.push()</span></h2>
+      <p class="metodo">Agrega un elemento al final del arreglo.</p>
+      <label for="inPush">País a agregar:</label>
+      <input type="text" id="inPush" placeholder="Ej: Italia" />
+      <button class="btn" onclick="accionPush()">Ejecutar Push</button>
+      <div class="output" id="outPush"></div>
+    </div>
+
+    
+    <div class="card">
+      <h2>4. Unshift <span class="badge">.unshift()</span></h2>
+      <p class="metodo">Agrega un elemento al inicio del arreglo.</p>
+      <label for="inUnshift">País a agregar al inicio:</label>
+      <input type="text" id="inUnshift" placeholder="Ej: Canada" />
+      <button class="btn" onclick="accionUnshift()">Ejecutar Unshift</button>
+      <div class="output" id="outUnshift"></div>
+    </div>
+
+   
+    <div class="card">
+      <h2>5. Splice <span class="badge">.splice()</span></h2>
+      <p class="metodo">Elimina elementos desde un índice determinado.</p>
+      <label for="inSpliceIdx">Índice de inicio:</label>
+      <input type="number" id="inSpliceIdx" placeholder="Ej: 2" min="0" />
+      <label for="inSpliceCant">Cantidad a eliminar:</label>
+      <input type="number" id="inSpliceCant" placeholder="Ej: 1" min="1" />
+      <button class="btn" onclick="accionSplice()">Ejecutar Splice</button>
+      <div class="output" id="outSplice"></div>
+    </div>
+
+   
+    <div class="card">
+      <h2>6. Delete <span class="badge">delete</span></h2>
+      <p class="metodo">Elimina el elemento en un índice (deja undefined).</p>
+      <label for="inDelete">Índice a borrar:</label>
+      <input type="number" id="inDelete" placeholder="Ej: 0" min="0" />
+      <button class="btn" onclick="accionDelete()">Ejecutar Delete</button>
+      <div class="output" id="outDelete"></div>
+    </div>
+
+    
+    <div class="card">
+      <h2>7. Reverse <span class="badge">.reverse()</span></h2>
+      <p class="metodo">Invierte el orden de todos los elementos.</p>
+      <button class="btn" onclick="accionReverse()">Ejecutar Reverse</button>
+      <div class="output" id="outReverse"></div>
+    </div>
+
+   
+    <div class="card">
+      <h2>8. Sort <span class="badge">.sort()</span></h2>
+      <p class="metodo">Ordena los elementos alfabéticamente.</p>
+      <button class="btn" onclick="accionSort()">Ejecutar Sort</button>
+      <div class="output" id="outSort"></div>
+    </div>
+
+    
+    <div class="card">
+      <h2>9. Concat <span class="badge">.concat()</span></h2>
+      <p class="metodo">Une el arreglo con otro (no modifica el original).</p>
+      <label for="inConcat">Nuevos países (separados por coma):</label>
+      <input type="text" id="inConcat" placeholder="Ej: Italia, Grecia" />
+      <button class="btn" onclick="accionConcat()">Ejecutar Concat</button>
+      <div class="output" id="outConcat"></div>
+    </div>
+
+ 
+    <div class="card">
+      <h2>10. Join <span class="badge">.join()</span></h2>
+      <p class="metodo">Une todos los elementos en un solo string.</p>
+      <label for="inJoin">Separador:</label>
+      <input type="text" id="inJoin" placeholder='Ej:  " - "  o  " | "' />
+      <button class="btn" onclick="accionJoin()">Ejecutar Join</button>
+      <div class="output" id="outJoin"></div>
+    </div>
+
+  
+    <div class="card">
+      <h2>11. Length <span class="badge">.length</span></h2>
+      <p class="metodo">Devuelve el número de elementos del arreglo.</p>
+      <button class="btn" onclick="accionLength()">Mostrar Length</button>
+      <div class="output" id="outLength"></div>
+    </div>
+
+  </div>
+
+ 
+  <div class="btn-group">
+    <button class="btn btn-danger" onclick="resetArr()"> Reiniciar Arreglo</button>
+    <a class="btn btn-outline" href="index.html">← Volver al menú</a>
+  </div>
+
+  <script src="js/ejercicio5.js"></script>
+</body>
+</html>
